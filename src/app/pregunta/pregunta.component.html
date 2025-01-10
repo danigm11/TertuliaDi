@@ -1,0 +1,15 @@
+<div class="title">
+  <h1 >{{this.Preguntas[idNum-1].Titulo}}</h1>
+</div>
+<div class="Preguntas">
+  <div class="box" (click)="cambiarPagina(1)">{{this.Preguntas[idNum-1].opciones[0]}}</div>
+  <div *ngIf="this.Preguntas[idNum-1].opciones[1]" class="box" (click)="cambiarPagina(2)">{{this.Preguntas[idNum-1].opciones[1]}}</div>
+  <div *ngIf="this.Preguntas[idNum-1].opciones[2]" class="box" (click)="cambiarPagina(3)">{{this.Preguntas[idNum-1].opciones[2]}}</div>
+  <div *ngIf="this.Preguntas[idNum-1].opciones[3]" class="box" (click)="cambiarPagina(4)">{{this.Preguntas[idNum-1].opciones[3]}}</div>
+  <div *ngIf="this.Preguntas[idNum-1].opciones[4]" class="box" (click)="cambiarPagina(5)">{{this.Preguntas[idNum-1].opciones[4]}}</div>
+  <div *ngIf="this.Preguntas[idNum-1].opciones[5]" class="box" (click)="cambiarPagina(6)">{{this.Preguntas[idNum-1].opciones[5]}}</div>
+</div>
+<br>
+<!--<div class="Preguntas">
+  <div class="box" (click)="cambiarPagina()" >Siguiente</div>
+</div>-->

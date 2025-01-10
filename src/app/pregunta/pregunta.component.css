@@ -1,0 +1,31 @@
+.title{
+  color: white;
+  text-shadow: black;
+  font-family: "Pinyon Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+}
+.Preguntas{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+
+}
+.box{
+  width: 35%;
+  border: solid 2px;
+  text-align: center;
+  margin-top: 2%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.box:hover{
+background-color: rgb(6, 28, 28);
+border: solid 2px black;
+transform: scale(1.1);
+}

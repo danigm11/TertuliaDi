@@ -1,0 +1,37 @@
+.title{
+
+  color: white;
+  font-family: "Pinyon Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+.BotonComenzar{
+  color: white;
+
+  font-family: "Pinyon Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+
+}
+button{
+  border: solid white 2px;
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0);
+  height: 60%;
+  width: 20%;
+  font-family: "Pinyon Script", serif;
+  color: white;
+  font-size: large;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+button:hover{
+    background-color: rgb(6, 28, 28);
+    border: solid 2px black;
+    transform: scale(1.1);
+}
