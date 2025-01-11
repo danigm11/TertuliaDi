@@ -31,40 +31,87 @@ export class PreguntaComponent {
         opciones: ['Ficción', 'No Ficción']
       },
       {
-        Titulo: 'Pregunta 2',
-        opciones: ['Opción 1', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Categorías',
+        opciones: ['Drama', 'Comedia']
       },
       {
-        Titulo: 'Pregunta 3',
-        opciones: ['Opción 1', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Categorías',
+        opciones: ['Tragedia', 'Terror']
       },
       {
-        Titulo: 'Pregunta 4',
-        opciones: ['Opción 1', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Categorías',
+        opciones: ['Recuentos de la vida', 'Acción']
       },
       {
-        Titulo: 'Pregunta 5',
-        opciones: ['Opción 1', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Categorías',
+        opciones: ['Fantasía', 'Ciencia ficción']
       },
       {
-        Titulo: 'Pregunta 6',
-        opciones: ['Opción 1', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Tipos de fantasía',
+        opciones: ['Dark', 'Light']
       },
       {
-        Titulo: 'Pregunta 7',
-        opciones: ['Opción 1', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Tipos de fantasía',
+        opciones: ['Mitología', 'Medieval']
       },
       {
-        Titulo: 'Pregunta 8',
-        opciones: ['Opción 1', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Tipos de fantasía',
+        opciones: ['Brujas', 'Piratas']
+      },     
+      {
+        Titulo: 'Tipos de fantasía',
+        opciones: ['Vampiros/Lobos', 'Criaturas']
       },
       {
-        Titulo: 'Pregunta 9',
-        opciones: ['Paaa', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Tipos de fantasía',
+        opciones: ['Cuentos', 'Sirenas']
       },
       {
-        Titulo: 'Pregunta 10',
-        opciones: ['Holaa', 'Opción 2', 'Opción 3', 'Opción 4']
+        Titulo: 'Tipos de ciencia ficción',
+        opciones: ['Distopía', 'Futurista', 'Steampunk', 'Espacial']
+      },
+      {
+        Titulo: 'Categorías',
+        opciones: ['Romance','Suspense']
+      },      {
+        Titulo: 'Categorías',
+        opciones: ['Histórica', 'Policiaca']
+      },
+      {
+        Titulo: 'Tiempo',
+        opciones: ['Pasado', 'Presente', 'Futuro', 'Atemporal']
+      },
+      {
+        Titulo: 'Protagonista',
+        opciones: ['Uno', 'Una', 'Duo', 'Grupo']
+      },
+      {
+        Titulo: 'Rango de edad',
+        opciones: ['Infancia', 'Adolescencia', 'Madurez', 'Juventud','Adultez']
+      },
+      {
+        Titulo: 'Tramas',
+        opciones: ['Juegos/videojuegos', 'Acertijos']
+      },
+      {
+        Titulo: 'Tramas',
+        opciones: ['Realeza', 'Viaje']
+      },
+      {
+        Titulo: 'Tramas',
+        opciones: ['Sueños', 'Dinero', 'Escolar', 'Desaparición/Aparición']
+      },
+      {
+        Titulo: 'Mascotas',
+        opciones: ['Gato', 'Perro', 'Ratón', 'Pájaro','Conejo']
+      },
+      {
+        Titulo: 'Romance Tropes',
+        opciones: ['Enemies to Lovers', 'Friends to Lovers', 'Triángulo amoroso', 'Relación Falsa','Amor prohibido']
+      },
+      {
+        Titulo: 'Cuando escribo, prefiero hacerlo en...',
+        opciones: ['Una cafetería', 'Junto a la chimenea', 'En un tren', 'Al aire libre','Una biblioteca','En mi cuarto']
       }
     ];
     
@@ -75,7 +122,7 @@ export class PreguntaComponent {
   cambiarPagina(Respuesta:number): void {
     const ruta = Number(this.id)+1
      this.nuevaRuta = `/Preguntas/${ruta}`;
-    if(ruta==11){
+    if(ruta==this.Preguntas.length+1){
       this.nuevaRuta = `/EnvioDatos`;
     }
     this.enviarPregunta(Respuesta)
@@ -84,7 +131,7 @@ export class PreguntaComponent {
     });
   }
   enviarPregunta(Respuesta:number): void{
-    sessionStorage.setItem('Pregunta'+this.id,Respuesta.toString())
+    sessionStorage.setItem('Pregunta'+this.id,this.Preguntas[Number(this.id)-1].opciones[Respuesta-1])  
   }
 }
 

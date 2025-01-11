@@ -18,11 +18,23 @@ export class EnvioDatosComponent {
     Pregunta8: "Hola",
     Pregunta9: "Hola",
     Pregunta10: "Holaaa",
+    Pregunta11: "Hola",
+    Pregunta12: "Hola",
+    Pregunta13: "Hola",
+    Pregunta14: "Hola",
+    Pregunta15: "Hola",
+    Pregunta16: "Hola",
+    Pregunta17: "Hola",
+    Pregunta18: "Hola",
+    Pregunta19: "Hola",
+    Pregunta20: "Holaaa",
+    Pregunta21: "Hola",
+    Pregunta22: "Hola",
     Nombre: "Danaai"
 };
 
 constructor(private service: GoogleSheetsService){}
-  Respuestas: string[]=["","","","","","","","","","","",""]
+  Respuestas: string[]=["","","","","","","","","","","","","","","","","","","","","","",""]
   ngOnInit(): void{
     for (let index = 0; index < this.Respuestas.length; index++) {
       this.Respuestas[index]=sessionStorage.getItem('Pregunta'+(index+1).toString())||''
@@ -40,11 +52,22 @@ constructor(private service: GoogleSheetsService){}
       Pregunta8: this.Respuestas[7],
       Pregunta9: this.Respuestas[8],
       Pregunta10: this.Respuestas[9],
-      Nombre: this.Respuestas[10]
+      Pregunta11: this.Respuestas[10],
+      Pregunta12: this.Respuestas[11],
+      Pregunta13: this.Respuestas[12],
+      Pregunta14: this.Respuestas[13],
+      Pregunta15: this.Respuestas[14],
+      Pregunta16: this.Respuestas[15],
+      Pregunta17: this.Respuestas[16],
+      Pregunta18: this.Respuestas[17],
+      Pregunta19: this.Respuestas[18],
+      Pregunta20: this.Respuestas[19],
+      Pregunta21: this.Respuestas[20],
+      Pregunta22: this.Respuestas[21],
+      Nombre: this.Respuestas[22]
 
     }
     this.enviarDatos()
-    console.log('hola')
   }
 
   enviarDatos(): void {
